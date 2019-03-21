@@ -26,6 +26,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "assets/baked/landingpage"
+              ]
+            },
             "styles": [
               "src/styles.scss",
               {
