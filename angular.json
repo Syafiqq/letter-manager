@@ -27,7 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/material.scss",
+                "bundleName": "assets/themes/material",
+                "lazy": true
+              }
             ],
             "scripts": [],
             "es5BrowserSupport": true,
@@ -85,7 +90,12 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/material.scss",
+                "bundleName": "src/assets/themes/material",
+                "lazy": true
+              }
             ],
             "scripts": [],
             "assets": [
