@@ -32,6 +32,11 @@
                 "input": "src/material.scss",
                 "bundleName": "assets/themes/material",
                 "lazy": true
+              },
+              {
+                "input": "src/assets/baked/landingpage/scss/style.scss",
+                "bundleName": "assets/styles/landingpage",
+                "lazy": true
               }
             ],
             "scripts": [],
@@ -94,6 +99,11 @@
               {
                 "input": "src/material.scss",
                 "bundleName": "src/assets/themes/material",
+                "lazy": true
+              },
+              {
+                "input": "src/assets/baked/landingpage/scss/style.scss",
+                "bundleName": "assets/styles/landingpage",
                 "lazy": true
               }
             ],
