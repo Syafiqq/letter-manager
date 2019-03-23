@@ -34,7 +34,7 @@
             "styles": [
               "src/styles.scss",
               {
-                "input": "src/material.scss",
+                "input": "src/assets/scss/material.scss",
                 "bundleName": "assets/themes/material",
                 "lazy": true
               },
@@ -107,7 +107,7 @@
             "styles": [
               "src/styles.scss",
               {
-                "input": "src/material.scss",
+                "input": "src/assets/scss/material.scss",
                 "bundleName": "src/assets/themes/material",
                 "lazy": true
               },
