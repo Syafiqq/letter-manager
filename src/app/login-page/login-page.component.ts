@@ -7,6 +7,7 @@ import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
+  hide = true;
 
   constructor() {
   }
