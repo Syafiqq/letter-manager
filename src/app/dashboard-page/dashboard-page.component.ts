@@ -14,6 +14,7 @@ export class DashboardPageComponent implements OnInit {
   ngOnInit() {
     StyleUtil.styleCssInjector(document, 'assets/themes/bulma.css');
     StyleUtil.styleCssInjector(document, 'assets/themes/material.css');
+    document.body.classList.add('has-background-white-ter');
   }
 
 }
