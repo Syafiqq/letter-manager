@@ -7,7 +7,10 @@ import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
   styleUrls: ['./register-page.component.scss']
 })
 export class RegisterPageComponent implements OnInit {
-  hide = true;
+  hide = {
+    password: true,
+    confirm: true
+  };
 
   constructor() {
   }

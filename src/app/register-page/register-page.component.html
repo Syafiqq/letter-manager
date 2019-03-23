@@ -4,32 +4,39 @@
       <div class="columns is-centered">
         <div class="column is-two-thirds">
           <mat-card>
+            <div class="has-margin-bottom-md is-hidden-tablet" style="text-align:center">
+              <img alt="Angular Logo"
+                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+                   width="196">
+            </div>
             <mat-card-header>
               <mat-card-title>Sign Up</mat-card-title>
               <mat-card-subtitle>Please sign up to get access</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content class="has-margin-top-sm has-padding-left-md has-padding-right-md">
               <div class="columns">
-                <div class="column is-half">
+                <div class="column">
                   <form>
                     <mat-form-field class="is-block">
                       <input matInput placeholder="School ID">
                     </mat-form-field>
                     <mat-form-field class="is-block">
-                      <input [type]="hide ? 'password' : 'text'" matInput placeholder="Enter your password">
-                      <mat-icon (click)="hide = !hide" matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      <input [type]="hide.password ? 'password' : 'text'" matInput placeholder="Enter your password">
+                      <mat-icon (click)="hide.password = !hide.password"
+                                matSuffix>{{hide.password ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </mat-form-field>
                     <mat-form-field class="is-block">
-                      <input [type]="hide ? 'password' : 'text'" matInput placeholder="Confirm your password">
-                      <mat-icon (click)="hide = !hide" matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      <input [type]="hide.confirm ? 'password' : 'text'" matInput placeholder="Confirm your password">
+                      <mat-icon (click)="hide.confirm = !hide.confirm"
+                                matSuffix>{{hide.confirm ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </mat-form-field>
                   </form>
                 </div>
-                <div class="column">
+                <div class="column is-one-third is-hidden-mobile">
                   <div style="text-align:center">
                     <img alt="Angular Logo"
                          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-                         width="196">
+                         width="144">
                   </div>
                 </div>
               </div>
