@@ -40,7 +40,7 @@
               },
               {
                 "input": "src/assets/baked/landingpage/scss/style.scss",
-                "bundleName": "assets/styles/landingpage",
+                "bundleName": "assets/themes/landingpage",
                 "lazy": true
               }
             ],
@@ -108,7 +108,7 @@
               },
               {
                 "input": "src/assets/baked/landingpage/scss/style.scss",
-                "bundleName": "assets/styles/landingpage",
+                "bundleName": "assets/themes/landingpage",
                 "lazy": true
               }
             ],
