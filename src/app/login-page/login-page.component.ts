@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
 
 @Component({
   selector: 'app-login-page',
@@ -11,6 +12,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    StyleUtil.styleCssInjector(document, 'assets/themes/material.css');
   }
 
 }
