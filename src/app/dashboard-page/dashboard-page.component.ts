@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -11,6 +12,8 @@ export class DashboardPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    StyleUtil.styleCssInjector(document, 'assets/themes/bulma.css');
+    StyleUtil.styleCssInjector(document, 'assets/themes/material.css');
   }
 
 }
