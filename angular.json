@@ -42,6 +42,11 @@
                 "input": "src/assets/baked/landingpage/scss/style.scss",
                 "bundleName": "assets/themes/landingpage",
                 "lazy": true
+              },
+              {
+                "input": "node_modules/bulma/bulma.sass",
+                "bundleName": "assets/themes/bulma",
+                "lazy": true
               }
             ],
             "scripts": [],
@@ -109,6 +114,11 @@
               {
                 "input": "src/assets/baked/landingpage/scss/style.scss",
                 "bundleName": "assets/themes/landingpage",
+                "lazy": true
+              },
+              {
+                "input": "node_modules/bulma/css/bulma.min.css",
+                "bundleName": "assets/themes/bulma",
                 "lazy": true
               }
             ],
