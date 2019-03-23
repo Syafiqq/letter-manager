@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
 
 @Component({
   selector: 'app-register-page',
@@ -6,11 +7,14 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./register-page.component.scss']
 })
 export class RegisterPageComponent implements OnInit {
+  hide = true;
 
   constructor() {
   }
 
   ngOnInit() {
+    StyleUtil.styleCssInjector(document, 'assets/themes/bulma.css');
+    StyleUtil.styleCssInjector(document, 'assets/themes/material.css');
   }
 
 }
