@@ -44,7 +44,7 @@
                 "lazy": true
               },
               {
-                "input": "node_modules/bulma/bulma.sass",
+                "input": "src/assets/scss/bulma.scss",
                 "bundleName": "assets/themes/bulma",
                 "lazy": true
               }
@@ -117,7 +117,7 @@
                 "lazy": true
               },
               {
-                "input": "node_modules/bulma/css/bulma.min.css",
+                "input": "src/assets/scss/bulma.scss",
                 "bundleName": "assets/themes/bulma",
                 "lazy": true
               }
