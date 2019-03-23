@@ -12,6 +12,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    StyleUtil.styleCssInjector(document, 'assets/themes/bulma.css');
     StyleUtil.styleCssInjector(document, 'assets/themes/material.css');
   }
 
