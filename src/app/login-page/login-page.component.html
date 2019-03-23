@@ -1,3 +1,28 @@
-<p>
-  login-page works!
-</p>
+<section class="hero has-background-white-ter is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-half is-offset-one-quarter">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+            <mat-card-subtitle>Please login to get access</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content class="has-margin-top-sm has-padding-left-md has-padding-right-md">
+            <form>
+              <mat-form-field class="is-block">
+                <input matInput placeholder="School ID">
+              </mat-form-field>
+              <mat-form-field class="is-block">
+                <input [type]="hide ? 'password' : 'text'" matInput placeholder="Enter your password">
+                <mat-icon (click)="hide = !hide" matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+          <mat-card-actions align="end" class="has-padding-left-md has-padding-right-md">
+            <button class="is-uppercase" mat-stroked-button>Login</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
