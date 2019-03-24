@@ -1,3 +1,89 @@
-<p>
-  insert-page works!
-</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="container">
+      <div class="columns is-mobile">
+        <div class="column">Letter Manager</div>
+        <div align="end" class="column">
+          <button mat-button
+                  matTooltip="Add"
+                  matTooltipPosition="below">
+            <mat-icon class="has-margin-xs">add</mat-icon>
+          </button>
+          <button mat-button
+                  matTooltip="Archive"
+                  matTooltipPosition="below">
+            <mat-icon class="has-margin-xs">archive</mat-icon>
+          </button>
+          <button color="warn"
+                  mat-button
+                  matTooltip="Logout"
+                  matTooltipPosition="below">
+            <mat-icon class="has-margin-xs">exit_to_app</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container has-margin-top-md">
+  <div class="columns">
+    <div class="column">
+      <mat-card>
+        <mat-card-content align="center">
+          <mat-horizontal-stepper linear="false" #stepper>
+            <mat-step>
+              <form>
+                <ng-template matStepLabel>Document Metadata</ng-template>
+                <div class="column is-half-desktop is-offset-one-quarter-desktop">
+                  <mat-form-field class="is-block">
+                    <input matInput placeholder="Letter Title">
+                  </mat-form-field>
+                  <mat-form-field class="is-block">
+                    <input matInput placeholder="Letter Code">
+                  </mat-form-field>
+                  <mat-form-field class="is-block">
+                    <input matInput placeholder="Letter Index">
+                  </mat-form-field>
+                  <mat-form-field class="is-block">
+                    <input matInput placeholder="Letter Number">
+                  </mat-form-field>
+                  <mat-form-field class="is-block">
+                    <input matInput placeholder="Letter Subject">
+                  </mat-form-field>
+                  <mat-form-field class="is-block">
+                    <input matInput [matDatepicker]="picker" placeholder="Letter Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step>
+              <form>
+                <ng-template matStepLabel>Upload Document</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Summary</ng-template>
+              You are now done.
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+              </div>
+            </mat-step>
+          </mat-horizontal-stepper>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
