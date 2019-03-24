@@ -10,6 +10,7 @@ import {MaterialModule} from './material.module';
 import {RegisterPageComponent} from './register-page/register-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
 import {ArchivePageComponent} from './archive-page/archive-page.component';
+import {DetailPageComponent} from './detail-page/detail-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ArchivePageComponent} from './archive-page/archive-page.component';
     LoginPageComponent,
     RegisterPageComponent,
     DashboardPageComponent,
-    ArchivePageComponent
+    ArchivePageComponent,
+    DetailPageComponent
   ],
   imports: [
     BrowserModule,
