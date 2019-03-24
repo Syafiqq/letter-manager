@@ -64,9 +64,37 @@
             <mat-step>
               <form>
                 <ng-template matStepLabel>Upload Document</ng-template>
-                <mat-form-field>
-                  <input matInput placeholder="Address" formControlName="secondCtrl" required>
-                </mat-form-field>
+                <div class="column has-text-centered">
+                  <button mat-button>
+                    <mat-icon class="has-margin-xs">
+                      cloud_upload
+                    </mat-icon>
+                    Upload
+                  </button>
+                  <div class="column" [style.display]="support ? 'block' : 'none'">
+                    <div #mypdf class="is-block"></div>
+                  </div>
+                  <div class="column" [style.display]="!support ? 'block' : 'none'">
+                    <mat-card class="has-margin-lg">
+                      <mat-card-content align="center">
+                        <mat-icon class="has-text-grey" style="font-size: 64px; width: 64px; height: 64px">
+                          sentiment_very_dissatisfied
+                        </mat-icon>
+                        <p>
+                          Looks like your machine does not support previewing pdf.
+                          <br>
+                          Ensure your uploaded document is correct
+                        </p>
+                      </mat-card-content>
+                    </mat-card>
+                  </div>
+                  <mat-radio-group aria-label="Letter Category">
+                    <mat-radio-button class="is-block has-margin-sm" value="1" required>Incoming Letter
+                    </mat-radio-button>
+                    <mat-radio-button class="is-block has-margin-sm" value="2" required>Outgoing Letter
+                    </mat-radio-button>
+                  </mat-radio-group>
+                </div>
                 <div>
                   <button mat-button matStepperPrevious>Back</button>
                   <button mat-button matStepperNext>Next</button>

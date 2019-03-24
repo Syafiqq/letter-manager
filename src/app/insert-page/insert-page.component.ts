@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
 import * as PDFObject from '../../../node_modules/pdfobject';
 
@@ -7,8 +7,10 @@ import * as PDFObject from '../../../node_modules/pdfobject';
   templateUrl: './insert-page.component.html',
   styleUrls: ['./insert-page.component.scss']
 })
-export class InsertPageComponent implements OnInit {
+export class InsertPageComponent implements OnInit, AfterViewInit {
   support = false;
+
+  @ViewChild('mypdf') div;
 
   constructor() {
   }
@@ -18,10 +20,15 @@ export class InsertPageComponent implements OnInit {
     StyleUtil.styleCssInjector(document, 'assets/themes/material.css');
     document.body.classList.add('has-background-white-ter');
     this.support = PDFObject.supportsPDFs;
-    /*if (this.support) {
-      const container = document.querySelector('#my-pdf');
-      PDFObject.embed('https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf', container);
-    }*/
+  }
+
+  ngAfterViewInit(): void {
+    if (this.support) {
+      if (this.div != null) {
+        PDFObject
+          .embed('https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf', this.div.nativeElement);
+      }
+    }
   }
 
 }
