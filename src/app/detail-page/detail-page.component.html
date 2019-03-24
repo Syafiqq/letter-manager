@@ -72,8 +72,27 @@
     </div>
   </div>
   <div class="columns">
-    <div class="column">
+    <div class="column" [style.display]="support ? 'block' : 'none'">
       <div id="my-pdf" class="is-block"></div>
+    </div>
+    <div class="column is-one-third is-offset-one-third" [style.display]="!support ? 'block' : 'none'">
+      <mat-card class="has-margin-lg">
+        <mat-card-content align="center">
+          <mat-icon class="has-text-grey" style="font-size: 64px; width: 64px; height: 64px">
+            sentiment_very_dissatisfied
+          </mat-icon>
+          <p>
+            Looks like your machine does not support previewing pdf.
+            <br>
+            Try
+            <button mat-stroked-button class="has-margin-top-xs">
+              <mat-icon class="has-margin-xs">save</mat-icon>
+              Downloading
+            </button>
+            instead.
+          </p>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>
