@@ -6,6 +6,7 @@ import {LoginPageComponent} from './login-page/login-page.component';
 import {RegisterPageComponent} from './register-page/register-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
 import {ArchivePageComponent} from './archive-page/archive-page.component';
+import {DetailPageComponent} from './detail-page/detail-page.component';
 
 const routes: Routes = [
   {path: 'landingpage', component: LandingPageComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'registerpage', component: RegisterPageComponent},
   {path: 'dashboardpage', component: DashboardPageComponent},
   {path: 'archivepage', component: ArchivePageComponent},
+  {path: 'detailpage', component: DetailPageComponent},
   {path: '', component: AppComponent},
 ];
 
