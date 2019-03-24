@@ -11,6 +11,7 @@ import {RegisterPageComponent} from './register-page/register-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
 import {ArchivePageComponent} from './archive-page/archive-page.component';
 import {DetailPageComponent} from './detail-page/detail-page.component';
+import {InsertPageComponent} from './insert-page/insert-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {DetailPageComponent} from './detail-page/detail-page.component';
     RegisterPageComponent,
     DashboardPageComponent,
     ArchivePageComponent,
-    DetailPageComponent
+    DetailPageComponent,
+    InsertPageComponent
   ],
   imports: [
     BrowserModule,
