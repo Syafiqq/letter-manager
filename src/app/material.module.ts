@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,
     MatPaginatorModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatStepperModule
   ],
   exports: [
     MatGridListModule,
@@ -47,7 +49,8 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,
     MatPaginatorModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatStepperModule
   ], providers: [
     MatDatepickerModule,
   ],
