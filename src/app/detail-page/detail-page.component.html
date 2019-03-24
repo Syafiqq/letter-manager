@@ -1,3 +1,33 @@
-<p>
-  detail-page works!
-</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="container">
+      <div class="columns is-mobile">
+        <div class="column">Letter Manager</div>
+        <div align="end" class="column">
+          <button mat-button
+                  matTooltip="Add"
+                  matTooltipPosition="below">
+            <mat-icon class="has-margin-xs">add</mat-icon>
+          </button>
+          <button mat-button
+                  matTooltip="Archive"
+                  matTooltipPosition="below">
+            <mat-icon class="has-margin-xs">archive</mat-icon>
+          </button>
+          <button color="warn"
+                  mat-button
+                  matTooltip="Logout"
+                  matTooltipPosition="below">
+            <mat-icon class="has-margin-xs">exit_to_app</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container has-margin-top-md">
+  <div class="columns">
+    <div class="column">
+    </div>
+  </div>
+</div>
