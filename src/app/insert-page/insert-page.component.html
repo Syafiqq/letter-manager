@@ -29,9 +29,9 @@
   <div class="columns">
     <div class="column">
       <mat-card>
-        <mat-card-content align="center">
+        <mat-card-content>
           <mat-horizontal-stepper linear="false" #stepper>
-            <mat-step>
+            <mat-step align="center">
               <form>
                 <ng-template matStepLabel>Document Metadata</ng-template>
                 <div class="column is-half-desktop is-offset-one-quarter-desktop">
@@ -61,7 +61,7 @@
                 </div>
               </form>
             </mat-step>
-            <mat-step>
+            <mat-step align="center">
               <form>
                 <ng-template matStepLabel>Upload Document</ng-template>
                 <div class="column has-text-centered">
@@ -103,10 +103,68 @@
             </mat-step>
             <mat-step>
               <ng-template matStepLabel>Summary</ng-template>
-              You are now done.
+              <div class="column">
+                <mat-list>
+                  <mat-list-item>
+                    <span class="column is-2 is-bold">Letter Title</span>
+                    <span class="column is-10">-Letter Title-</span>
+                  </mat-list-item>
+                  <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  <mat-list-item>
+                    <span class="column is-2 is-bold">Letter Code</span>
+                    <span class="column is-10">-Letter Code-</span>
+                  </mat-list-item>
+                  <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  <mat-list-item>
+                    <span class="column is-2 is-bold">Letter Index</span>
+                    <span class="column is-10">-Letter Index-</span>
+                  </mat-list-item>
+                  <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  <mat-list-item>
+                    <span class="column is-2 is-bold">Letter Number</span>
+                    <span class="column is-10">-Letter Number-</span>
+                  </mat-list-item>
+                  <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  <mat-list-item>
+                    <span class="column is-2 is-bold">Letter Subject</span>
+                    <span class="column is-10">-Letter Subject-</span>
+                  </mat-list-item>
+                  <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  <mat-list-item>
+                    <span class="column is-2 is-bold">Letter Date</span>
+                    <span class="column is-10">-Letter Date-</span>
+                  </mat-list-item>
+                  <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  <mat-list-item>
+                    <span class="column is-2 is-bold">Letter Kind</span>
+                    <span class="column is-10">-Letter Kind-</span>
+                  </mat-list-item>
+                  <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  <div [style.display]="support ? 'block' : 'none'">
+                    <div #mypdfsum class="is-block"></div>
+                    <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  </div>
+                  <div [style.display]="!support ? 'block' : 'none'">
+                    <mat-card class="has-margin-lg">
+                      <mat-card-content align="center">
+                        <mat-icon class="has-text-grey" style="font-size: 64px; width: 64px; height: 64px">
+                          sentiment_very_dissatisfied
+                        </mat-icon>
+                        <p>
+                          Looks like your machine does not support previewing pdf.
+                          <br>
+                          Ensure your uploaded document is correct
+                        </p>
+                      </mat-card-content>
+                    </mat-card>
+                    <mat-divider class="is-block" style="position: relative;"></mat-divider>
+                  </div>
+                </mat-list>
+              </div>
               <div>
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button (click)="stepper.reset()">Reset</button>
+                <button mat-stroked-button class="is-pulled-right">Save</button>
               </div>
             </mat-step>
           </mat-horizontal-stepper>

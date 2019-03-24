@@ -11,6 +11,7 @@ export class InsertPageComponent implements OnInit, AfterViewInit {
   support = false;
 
   @ViewChild('mypdf') div;
+  @ViewChild('mypdfsum') divsum;
 
   constructor() {
   }
@@ -27,6 +28,10 @@ export class InsertPageComponent implements OnInit, AfterViewInit {
       if (this.div != null) {
         PDFObject
           .embed('https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf', this.div.nativeElement);
+      }
+      if (this.divsum != null) {
+        PDFObject
+          .embed('https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf', this.divsum.nativeElement);
       }
     }
   }
