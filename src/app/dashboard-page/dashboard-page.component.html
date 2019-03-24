@@ -20,8 +20,14 @@
 </mat-toolbar>
 <div class="container has-margin-top-md">
   <div class="columns">
-    <div class="column is-half is-offset-one-quarter has-background-primary">
-      First column
+    <div class="column is-half is-offset-one-quarter">
+      <mat-form-field class="is-block" appearance="outline">
+        <mat-label>Search document here...!</mat-label>
+        <input matInput placeholder="Placeholder">
+        <button matSuffix mat-stroked-button>
+          <mat-icon class="has-margin-xs">search</mat-icon>
+        </button>
+      </mat-form-field>
     </div>
   </div>
 </div>
