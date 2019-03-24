@@ -15,6 +15,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatPaginatorModule,
     MatDividerModule,
     MatListModule,
-    MatStepperModule
+    MatStepperModule,
+    MatRadioModule
   ],
   exports: [
     MatGridListModule,
@@ -50,7 +52,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatPaginatorModule,
     MatDividerModule,
     MatListModule,
-    MatStepperModule
+    MatStepperModule,
+    MatRadioModule
   ], providers: [
     MatDatepickerModule,
   ],
