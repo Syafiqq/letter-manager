@@ -9,4 +9,10 @@ describe('EnvService', () => {
     const service: EnvService = TestBed.get(EnvService);
     expect(service).toBeTruthy();
   });
+
+  it('should be store appUrl', () => {
+    const service: EnvService = TestBed.get(EnvService);
+    service.apiUrl = 'new url';
+    expect(service.apiUrl).toEqual('new url');
+  });
 });
