@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
-import * as PDFObject from '../../../node_modules/pdfobject';
+import {StyleUtil} from '../../../assets/ts/model/util/StyleUtil';
+import * as PDFObject from '../../../../node_modules/pdfobject';
 
 @Component({
   selector: 'app-detail-page',

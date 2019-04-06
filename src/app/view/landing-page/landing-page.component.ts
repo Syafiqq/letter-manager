@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
-import {ScriptUtil} from '../../assets/ts/model/util/ScriptUtil';
+import {StyleUtil} from '../../../assets/ts/model/util/StyleUtil';
+import {ScriptUtil} from '../../../assets/ts/model/util/ScriptUtil';
 
 @Component({
   selector: 'app-landing-page',

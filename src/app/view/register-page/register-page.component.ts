@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {StyleUtil} from '../../assets/ts/model/util/StyleUtil';
+import {StyleUtil} from '../../../assets/ts/model/util/StyleUtil';
 
 @Component({
   selector: 'app-register-page',
