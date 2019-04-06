@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {StyleUtil} from '../../../assets/ts/model/util/StyleUtil';
-import * as PDFObject from '../../../../node_modules/pdfobject';
+import {StyleUtil} from '../../../../assets/ts/model/util/StyleUtil';
+import * as PDFObject from '../../../../../node_modules/pdfobject';
 
 @Component({
   selector: 'app-insert-page',

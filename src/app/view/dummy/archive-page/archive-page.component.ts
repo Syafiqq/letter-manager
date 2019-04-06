@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {StyleUtil} from '../../../assets/ts/model/util/StyleUtil';
+import {StyleUtil} from '../../../../assets/ts/model/util/StyleUtil';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 
 
