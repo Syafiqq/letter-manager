@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 
 import {EnvService} from './env.service';
-import {EnvServiceProvider} from './env.service.provider';
+import * as MockEnv from './../../../../src/env.js';
 import {MockEnvService} from './env.service.mock';
 
 describe('EnvService', () => {
@@ -30,5 +30,10 @@ describe('EnvService', () => {
   it('should create same object', () => {
     const service: EnvService = TestBed.get(EnvService);
     expect(globEnvService).toEqual(service);
+  });
+
+  it('should print valid url', () => {
+    const service: EnvService = TestBed.get(EnvService);
+    expect(service.apiUrl).toEqual(MockEnv.apiUrl);
   });
 });
