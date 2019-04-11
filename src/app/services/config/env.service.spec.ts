@@ -2,6 +2,7 @@ import {TestBed} from '@angular/core/testing';
 
 import {EnvService} from './env.service';
 import {EnvServiceProvider} from './env.service.provider';
+import {MockEnvService} from './env.service.mock';
 
 describe('EnvService', () => {
   let globEnvService: EnvService;
@@ -9,7 +10,7 @@ describe('EnvService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        EnvServiceProvider
+        {provide: EnvService, useClass: MockEnvService}
       ]
     });
     globEnvService = TestBed.get(EnvService);
